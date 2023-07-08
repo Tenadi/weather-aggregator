@@ -1,0 +1,11 @@
+[
+  {
+    "latitude": 40.71,
+    "longitude": -74.01,
+    "utcTime": "2023-07-07T16:00:00Z",
+    "temperature": 29,
+    "windSpeed": 5,
+    "windDirection": "North",
+    "precipitationChance": 0.2
+  }
+]
