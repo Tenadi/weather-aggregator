@@ -31,14 +31,9 @@ docker-compose up
 ## Usage
 
 * The application automatically fetches and aggregates weather data from predefined sources during startup.
-* You can also manually fetch and save weather data from Open-Meteo with a specific latitude and longitude by sending a GET request to `http://localhost:8080/api/fetch-open-metro-today?latitude={lat}&longitude={lon}`.
-* You can upload and save weather data in CSV or JSON format by sending a POST request to `http://localhost:8080/api/upload-csv` or `http://localhost:8080/api/upload-json` respectively. The request body should contain the file to be uploaded with key 'file'.
-* You can retrieve all stored weather data by sending a GET request to `http://localhost:8080/api/all-weather-data`.
-
-## Running the tests
-
-Tests can be run with the following command:
-mvn test
+* You can also manually fetch and save weather data from Open-Meteo with a specific latitude and longitude by sending a GET request to `http://localhost:5433/api/fetch-open-metro-today?latitude={lat}&longitude={lon}`.
+* You can upload and save weather data in CSV or JSON format by sending a POST request to `http://localhost:5433/api/upload-csv` or `http://localhost:5433/api/upload-json` respectively. The request body should contain the file to be uploaded with key 'file'.
+* You can retrieve all stored weather data by sending a GET request to `http://localhost:5433/api/all-weather-data`.
 
 ## Deployment
 
