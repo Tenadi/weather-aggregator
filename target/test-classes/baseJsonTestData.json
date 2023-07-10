@@ -5,7 +5,7 @@
     "utcTime": "2023-07-10T12:00",
     "temperature": 25,
     "windSpeed": 10,
-    "windDirection": "NW",
+    "windDirection": 1,
     "precipitationChance": 0.15
   },
   {
@@ -14,7 +14,7 @@
     "utcTime": "2023-07-10T15:00",
     "temperature": 30,
     "windSpeed": 15,
-    "windDirection": "NE",
+    "windDirection": 247,
     "precipitationChance": 0.20
   },
   {
@@ -23,7 +23,7 @@
     "utcTime": "2023-07-10T18:00",
     "temperature": 22,
     "windSpeed": 8,
-    "windDirection": "SW",
+    "windDirection": 250,
     "precipitationChance": 0.10
   }
 ]
