@@ -1,0 +1,9 @@
+server:
+  port: 5433
+spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/postgres
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update

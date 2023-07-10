@@ -1,4 +1,0 @@
-FROM postgres:latest
-ENV POSTGRES_DB=weather
-ENV POSTGRES_USER=testUserName
-ENV POSTGRES_PASSWORD=testpassword

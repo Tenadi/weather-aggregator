@@ -1,29 +1,29 @@
 package moulton.thomas.weather_aggregator.datasource;
 
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 import moulton.thomas.weather_aggregator.model.WeatherData;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.List;
+
 public class CSVWeatherDataSource implements WeatherDataSource {
 
-    private String filePath;
+    private InputStreamReader reader;
 
-    public CSVWeatherDataSource(String filePath) {
-        this.filePath = filePath;
+    public CSVWeatherDataSource(InputStreamReader reader) {
+        this.reader = reader;
     }
 
     @Override
     public List<WeatherData> fetchData() {
         List<WeatherData> weatherDataList = new ArrayList<>();
-        try (Reader reader = Files.newBufferedReader(Paths.get(filePath))) {
-            CsvToBean<WeatherData> csvToBean = new CsvToBeanBuilder(reader)
+        try (Reader reader = new BufferedReader(this.reader)) {
+            CsvToBean<WeatherData> csvToBean = new CsvToBeanBuilder<WeatherData>(reader)
                     .withType(WeatherData.class)
                     .withIgnoreLeadingWhiteSpace(true)
                     .build();
@@ -33,7 +33,7 @@ public class CSVWeatherDataSource implements WeatherDataSource {
         }
         return weatherDataList;
     }
-    
+
     protected WeatherData parseLine(String line) {
         String[] fields = line.split(","); // assuming fields are separated by commas
 
@@ -48,6 +48,4 @@ public class CSVWeatherDataSource implements WeatherDataSource {
 
         return data;
     }
-
-    
 }

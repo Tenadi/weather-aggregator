@@ -6,14 +6,18 @@ import moulton.thomas.weather_aggregator.model.WeatherData;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
+@SpringBootApplication
 public class App {
     public static void main(String[] args) {
-        List<WeatherDataSource> sources = new ArrayList<>();
-        sources.add(new CSVWeatherDataSource("path_to_your_csv_file.csv"));
-        sources.add(new JSONWeatherDataSource("path_to_your_json_file.json"));
+        ApplicationContext context = SpringApplication.run(App.class, args);
 
-        Database db = new Database();
+        Database db = context.getBean(Database.class);
+
+        List<WeatherDataSource> sources = new ArrayList<>();
 
         for (WeatherDataSource source : sources) {
             List<WeatherData> data = source.fetchData();
@@ -22,6 +26,11 @@ public class App {
 
                 db.insertWeatherData(weatherData);
             }
+        }
+        
+        List<WeatherData> dataFromDb = db.getAllWeatherData();
+        for (WeatherData data : dataFromDb) {
+            System.out.println(data);
         }
     }
 }

@@ -1,0 +1,11 @@
+moulton\thomas\weather_aggregator\database\Database.class
+moulton\thomas\weather_aggregator\translator\OpenMetroDataTranslator.class
+moulton\thomas\weather_aggregator\datasource\JSONWeatherDataSource.class
+moulton\thomas\weather_aggregator\datasource\JSONWeatherDataSource$1.class
+moulton\thomas\weather_aggregator\datasource\WeatherDataSource.class
+moulton\thomas\weather_aggregator\datasource\CSVWeatherDataSource.class
+moulton\thomas\weather_aggregator\datasource\OpenMeteoDataSource.class
+moulton\thomas\weather_aggregator\datasource\WeatherDataAggregator.class
+moulton\thomas\weather_aggregator\model\WeatherData.class
+moulton\thomas\weather_aggregator\api\ApiController.class
+moulton\thomas\weather_aggregator\App.class

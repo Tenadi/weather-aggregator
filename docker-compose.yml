@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - ./db/init:/docker-entrypoint-initdb.d
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  weather-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5433:5433"
+    depends_on:
+      - db
+    command: ["./wait-for-it.sh", "db:5432"]
+    environment:
+      - POSTGRES_USER=postgres
+
+volumes:
+  postgres-data:

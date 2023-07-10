@@ -1,11 +1,29 @@
 [
   {
-    "latitude": 40.71,
-    "longitude": -74.01,
-    "utcTime": "2023-07-07T16:00:00Z",
-    "temperature": 29,
-    "windSpeed": 5,
-    "windDirection": "North",
-    "precipitationChance": 0.2
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "utcTime": "2023-07-10T12:00",
+    "temperature": 25,
+    "windSpeed": 10,
+    "windDirection": 1,
+    "precipitationChance": 0.15
+  },
+  {
+    "latitude": 40.7128,
+    "longitude": -74.0060,
+    "utcTime": "2023-07-10T15:00",
+    "temperature": 30,
+    "windSpeed": 15,
+    "windDirection": 247,
+    "precipitationChance": 0.20
+  },
+  {
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "utcTime": "2023-07-10T18:00",
+    "temperature": 22,
+    "windSpeed": 8,
+    "windDirection": 250,
+    "precipitationChance": 0.10
   }
 ]
