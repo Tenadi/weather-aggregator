@@ -1,8 +1,11 @@
 @echo off
-REM This scipt will build the docker containers provided Docker engine is running
+REM This scipt will build the docker containers
+
+:: Ensure wsl updated
+wsl --update
 
 :: Build Docker containers
 docker-compose build
 
-:: Start Docker containers in detached mode
-docker-compose up -d
+:: Pause on complete
+pause

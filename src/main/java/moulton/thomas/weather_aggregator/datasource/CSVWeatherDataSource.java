@@ -11,14 +11,31 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * CSVWeatherDataSource represents a data source that fetches weather data from CSV files.
+ * It implements the WeatherDataSource interface, providing the fetchData method
+ * to read the CSV file and parse it into a list of WeatherData objects.
+ * 
+ * Author Thomas Moulton
+ */
 public class CSVWeatherDataSource implements WeatherDataSource {
 
     private InputStreamReader reader;
 
+    /**
+     * Constructs a new CSVWeatherDataSource instance using the provided reader.
+     *
+     * @param reader the InputStreamReader to use for reading the CSV data
+     */
     public CSVWeatherDataSource(InputStreamReader reader) {
         this.reader = reader;
     }
 
+    /**
+     * Fetches the weather data from the CSV file, parsing each line into a WeatherData object.
+     *
+     * @return a list of WeatherData objects representing the parsed CSV data
+     */
     @Override
     public List<WeatherData> fetchData() {
         List<WeatherData> weatherDataList = new ArrayList<>();
@@ -34,6 +51,13 @@ public class CSVWeatherDataSource implements WeatherDataSource {
         return weatherDataList;
     }
 
+    /**
+     * Parses a line from the CSV file into a WeatherData object.
+     * This method assumes that the CSV fields are separated by commas.
+     *
+     * @param line the line from the CSV file to parse
+     * @return a WeatherData object representing the parsed line
+     */
     protected WeatherData parseLine(String line) {
         String[] fields = line.split(","); // assuming fields are separated by commas
 

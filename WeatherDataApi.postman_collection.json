@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "ba112358-ab91-4edf-b184-9a12f9a8c88a",
+		"name": "WeatherDataApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27179506"
+	},
+	"item": [
+		{
+			"name": "ApiTest",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prompt\": \"The Rain In Spain\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5433/api/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5433",
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch-open-metro-today",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5433/api//fetch-open-metro-today?latitude=34.0522&longitude=-118.2437",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5433",
+					"path": [
+						"api",
+						"",
+						"fetch-open-metro-today"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "34.0522"
+						},
+						{
+							"key": "longitude",
+							"value": "-118.2437"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-weather-data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5433/api//all-weather-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5433",
+					"path": [
+						"api",
+						"",
+						"all-weather-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "External-open-metro-api-call",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.open-meteo.com/v1/forecast?latitude=51.5085&longitude=-0.1257&hourly=temperature_2m,precipitation,windspeed_180m,winddirection_180m&forecast_days=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"open-meteo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "51.5085"
+						},
+						{
+							"key": "longitude",
+							"value": "-0.1257"
+						},
+						{
+							"key": "hourly",
+							"value": "temperature_2m,precipitation,windspeed_180m,winddirection_180m"
+						},
+						{
+							"key": "forecast_days",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload-json",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5433/api/upload-json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5433",
+					"path": [
+						"api",
+						"upload-json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload-csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5433/api/upload-csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5433",
+					"path": [
+						"api",
+						"upload-csv"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-all-weather-data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5433/api/delete-all-weather-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5433",
+					"path": [
+						"api",
+						"delete-all-weather-data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

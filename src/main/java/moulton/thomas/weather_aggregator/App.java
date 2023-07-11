@@ -15,7 +15,7 @@ import org.springframework.context.ApplicationContext;
  * 
  * This is achieved via a RESTful api, controlled by the ApiController.
  * 
- * This project  is intended to be run within a docker conatiner.
+ * This project is intended to be run within a docker container.
  * 
  * Author Thomas Moulton
  */

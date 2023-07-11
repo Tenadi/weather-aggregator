@@ -1,8 +1,6 @@
 #!/bin/bash
-# This script will build the Docker containers provided the Docker engine is running
+# This script will build the Docker containers
 
 # Build Docker containers
 docker-compose build
 
-# Start Docker containers in detached mode
-docker-compose up -d

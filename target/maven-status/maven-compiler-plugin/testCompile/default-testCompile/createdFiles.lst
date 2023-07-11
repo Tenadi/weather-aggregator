@@ -1,3 +1,4 @@
 moulton\thomas\weather_aggregator\datasource\CSVWeatherDataSourceTest.class
 moulton\thomas\weather_aggregator\datasource\JSONWeatherDataSourceTest.class
 moulton\thomas\weather_aggregator\AppTest.class
+moulton\thomas\weather_aggregator\datasource\OpenMetaDataSourceTest.class

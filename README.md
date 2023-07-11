@@ -6,15 +6,16 @@ Weather Aggregator is a Java application that fetches, aggregates, and stores we
 
 Before you begin, ensure you have met the following requirements:
 
-* You have installed the latest version of Java (Java 11 or later)
-* You have installed Docker
-* You have a basic understanding of Java, Spring Boot and Docker technology
+* You must have Docker Engine, ideally with Docker Desktop (v24.0.2)
+* You must have WSL available on your Windows machine (if Windows is used).
+** You can check this requirement by running wsl-check.bat
+* Optionally, it can be useful to have postman, or similar, to fire REST api requests.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Installation
+### Installation and usage
 
 1. Clone the repository
 git clone https://github.com/your_username_/WeatherAggregator.git
@@ -22,11 +23,9 @@ git clone https://github.com/your_username_/WeatherAggregator.git
 2. Navigate into the project directory
 cd WeatherAggregator
 
-3. Build the Docker images for the Java app and the PostgreSQL database:
-docker-compose build
+3. Either run setup.cmd, or setup.sh, depending on Linux or Windows OS
 
-4. Run the Docker containers:
-docker-compose up
+4. Rither run run.cmd, or run.sh, depending on Linux or Windows OS
 
 ## Usage
 
@@ -34,16 +33,9 @@ docker-compose up
 * You can also manually fetch and save weather data from Open-Meteo with a specific latitude and longitude by sending a GET request to `http://localhost:5433/api/fetch-open-metro-today?latitude={lat}&longitude={lon}`.
 * You can upload and save weather data in CSV or JSON format by sending a POST request to `http://localhost:5433/api/upload-csv` or `http://localhost:5433/api/upload-json` respectively. The request body should contain the file to be uploaded with key 'file'.
 * You can retrieve all stored weather data by sending a GET request to `http://localhost:5433/api/all-weather-data`.
+* It is also possible to pass either JSON weather data or CSV weather data using the POST requests http://localhost:5433/api/upload-json and http://localhost:5433/api/upload-csv, by passing the respective file under the 'file' key as form-data.
+* Example templates of data that can be passed can be found in src/test/resources.
 
-## Deployment
-
-To deploy this on a live system, you will need to configure the application properties (src/main/resources/application.properties) according to your production environment and build the project using:
-
-mvn clean package
-
-This will generate a .jar file in the target directory which can be run with:
-
-java -jar target/weatheraggregator-0.0.1-SNAPSHOT.jar
 
 ## Built With
 
@@ -53,5 +45,4 @@ java -jar target/weatheraggregator-0.0.1-SNAPSHOT.jar
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-Please adjust the repository URL, username, and other specific details to match your setup.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for detail
