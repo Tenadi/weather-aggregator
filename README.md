@@ -35,6 +35,7 @@ cd WeatherAggregator
 * You can retrieve all stored weather data by sending a GET request to `http://localhost:5433/api/all-weather-data`.
 * It is also possible to pass either JSON weather data or CSV weather data using the POST requests http://localhost:5433/api/upload-json and http://localhost:5433/api/upload-csv, by passing the respective file under the 'file' key as form-data.
 * Example templates of data that can be passed can be found in src/test/resources.
+* The entire database table can be emptied by passing a POST request to http://localhost:5433/api/delete-all-weather-data.
 
 
 ## Built With
