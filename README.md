@@ -7,8 +7,7 @@ Weather Aggregator is a Java application that fetches, aggregates, and stores we
 Before you begin, ensure you have met the following requirements:
 
 * You must have Docker Engine, ideally with Docker Desktop (v24.0.2)
-* You must have WSL available on your Windows machine (if Windows is used).
-** You can check this requirement by running wsl-check.bat
+* You must have WSL available on your Windows machine (if Windows is used). You can check this requirement by running wsl-check.bat
 * Optionally, it can be useful to have postman, or similar, to fire REST api requests.
 
 ## Getting Started
