@@ -28,14 +28,12 @@ cd WeatherAggregator
 
 ## Usage
 
-* The application automatically fetches and aggregates weather data from predefined sources during startup.
 * You can also manually fetch and save weather data from Open-Meteo with a specific latitude and longitude by sending a GET request to `http://localhost:5433/api/fetch-open-metro-today?latitude={lat}&longitude={lon}`.
 * You can upload and save weather data in CSV or JSON format by sending a POST request to `http://localhost:5433/api/upload-csv` or `http://localhost:5433/api/upload-json` respectively. The request body should contain the file to be uploaded with key 'file'.
 * You can retrieve all stored weather data by sending a GET request to `http://localhost:5433/api/all-weather-data`.
 * It is also possible to pass either JSON weather data or CSV weather data using the POST requests http://localhost:5433/api/upload-json and http://localhost:5433/api/upload-csv, by passing the respective file under the 'file' key as form-data.
 * Example templates of data that can be passed can be found in src/test/resources.
 * The entire database table can be emptied by passing a POST request to http://localhost:5433/api/delete-all-weather-data.
-
 
 ## Built With
 
