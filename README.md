@@ -16,11 +16,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installation and usage
 
-1. Clone the repository
-git clone https://github.com/your_username_/WeatherAggregator.git
+1. git clone https://github.com/Tenadi/weather-aggregator
 
-2. Navigate into the project directory
-cd WeatherAggregator
+2. cd WeatherAggregator
 
 3. Either run setup.cmd, or setup.sh, depending on Linux or Windows OS
 
