@@ -4,6 +4,6 @@ CREATE TABLE weather_data (
     utc_time TIMESTAMP NOT NULL,
     temperature DECIMAL NOT NULL,
     wind_speed DECIMAL NOT NULL,
-    wind_direction VARCHAR(255) NOT NULL,
+    wind_direction DECIMAL NOT NULL,
     precipitation_chance DECIMAL NOT NULL
 );
