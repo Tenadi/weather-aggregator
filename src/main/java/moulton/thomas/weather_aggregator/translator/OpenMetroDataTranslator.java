@@ -41,7 +41,7 @@ public class OpenMetroDataTranslator {
             weatherData.setTemperature(temperatureArray.get(i).getAsDouble());
             weatherData.setPrecipitationChance(precipitationArray.get(i).getAsDouble());
             weatherData.setWindSpeed(windspeedArray.get(i).getAsDouble());
-            weatherData.setWindDirection(winddirectionArray.get(i).getAsString());
+            weatherData.setWindDirection(winddirectionArray.get(i).getAsDouble());
 
             weatherDataList.add(weatherData);
         }

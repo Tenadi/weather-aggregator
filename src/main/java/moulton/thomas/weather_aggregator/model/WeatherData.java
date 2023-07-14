@@ -13,7 +13,7 @@ public class WeatherData {
     private String utcTime; // Consider using a java.time type, e.g. ZonedDateTime
     private double temperature;
     private double windSpeed;
-    private String windDirection;
+    private double windDirection;
     private double precipitationChance;
 
     /**
@@ -74,7 +74,7 @@ public class WeatherData {
     /**
      * @return the wind direction at the time of data collection
      */
-    public String getWindDirection() {
+    public double getWindDirection() {
         return windDirection;
     }
 
@@ -123,9 +123,9 @@ public class WeatherData {
     }
 
     /**
-     * @param windDirection the wind direction at the time of data collection
+     * @param string the wind direction at the time of data collection
      */
-    public void setWindDirection(String windDirection) {
+    public void setWindDirection(double windDirection) {
         this.windDirection = windDirection;
     }
 

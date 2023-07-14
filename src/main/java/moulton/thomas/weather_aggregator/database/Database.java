@@ -29,7 +29,7 @@ public class Database {
         data.setUtcTime(rs.getString("utc_time"));
         data.setTemperature(rs.getInt("temperature"));
         data.setWindSpeed(rs.getInt("wind_speed"));
-        data.setWindDirection(rs.getString("wind_direction"));
+        data.setWindDirection(rs.getDouble("wind_direction"));
         data.setPrecipitationChance(rs.getDouble("precipitation_chance"));
 
         return data;

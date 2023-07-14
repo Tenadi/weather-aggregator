@@ -67,7 +67,7 @@ public class CSVWeatherDataSource implements WeatherDataSource {
         data.setUtcTime(fields[2].trim());
         data.setTemperature(Double.parseDouble(fields[3].trim()));
         data.setWindSpeed(Double.parseDouble(fields[4].trim()));
-        data.setWindDirection(fields[5].trim());
+        data.setWindDirection(Double.parseDouble(fields[5].trim()));
         data.setPrecipitationChance(Double.parseDouble(fields[6].trim()));
 
         return data;

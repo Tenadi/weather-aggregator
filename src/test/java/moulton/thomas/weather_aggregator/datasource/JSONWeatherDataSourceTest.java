@@ -41,7 +41,7 @@ public class JSONWeatherDataSourceTest {
         assertEquals("2023-07-10T12:00", weatherData1.getUtcTime());
         assertEquals(25, weatherData1.getTemperature());
         assertEquals(10, weatherData1.getWindSpeed());
-        assertEquals("NW", weatherData1.getWindDirection());
+        assertEquals(1.0, weatherData1.getWindDirection());
         assertEquals(0.15, weatherData1.getPrecipitationChance());
     }
 }
